@@ -33,6 +33,7 @@ public class mapChoose implements Listener {
 
         main plugin;
         public mapChoose(main instance) {
+            disableScore1 = 1;
             plugin = instance;
 
              map1name = plugin.getConfig().getString("maps.map1.name");
@@ -317,7 +318,7 @@ public class mapChoose implements Listener {
             map9s.setScore(map.get(map9name));
 
         }
-        disableScore1 = 1;
+
         event.getPlayer().setScoreboard(board);
 
 
