@@ -1,0 +1,36 @@
+package com.consolecraft.sg.main;
+
+import org.bukkit.Bukkit;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.scheduler.BukkitRunnable;
+
+/**
+ * Created by robin on 22/06/15.
+ */
+public class countdown {
+
+    main plugin;
+
+    @EventHandler
+    public void onPlayerJoin (final PlayerJoinEvent event){
+        int playerstostartCount = plugin.getConfig().getInt("playerstostart");
+        if(Bukkit.getServer().getOnlinePlayers().size() >= playerstostartCount ){
+
+            new BukkitRunnable() {
+                int count = plugin.getConfig().getInt("countdown");
+
+                @Override
+                public void run() {
+                    if (count == 0){ cancel();}
+                    else{
+                        event.getPlayer().setLevel(count);
+
+                        count--;}
+                }
+            }.runTaskTimer(plugin,0,20);
+
+        }
+
+    }
+}
