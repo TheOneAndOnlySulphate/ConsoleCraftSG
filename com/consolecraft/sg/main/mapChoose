@@ -393,7 +393,6 @@ public class mapChoose implements Listener {
                 map9s.setScore(map.get(map9name));
 
             }
-            disableScore1 = 1;
             player.setScoreboard(board);
 
         }
