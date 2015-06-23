@@ -15,6 +15,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.scoreboard.*;
 
+import com.consolecraft.sg.main.MainClass;
+
 import java.util.HashMap;
 
 public class MapSelector implements Listener {
