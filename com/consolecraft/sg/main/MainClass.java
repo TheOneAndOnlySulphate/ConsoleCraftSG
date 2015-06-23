@@ -10,10 +10,11 @@ public class main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Bukkit.getPluginManager().registerEvents(new mapChoose(), this);
+       Bukkit.getPluginManager().registerEvents(new mapChoose(), this);
     saveDefaultConfig();
-
-        }
-
-
+    }
+    
+    @Override
+    public void onDisable() {
+    }
 }
