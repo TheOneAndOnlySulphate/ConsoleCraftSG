@@ -35,19 +35,18 @@ public class MapSelector implements Listener {
     public String map9name;
     public HashMap<String, Integer> map;
 
-        public void mapChoose(MainClass instance) {
+        public MapSelector(MainClass instance) {
             disableScore1 = 1;
-            private static MainClass plugin = instance;
 
-            map1name = plugin.getConfig().getString("maps.map1.name");
-            map2name = plugin.getConfig().getString("maps.map2.name");
-            map3name = plugin.getConfig().getString("maps.map3.name");
-            map4name = plugin.getConfig().getString("maps.map4.name");
-            map5name = plugin.getConfig().getString("maps.map5.name");
-            map6name = plugin.getConfig().getString("maps.map6.name");
-            map7name = plugin.getConfig().getString("maps.map7.name");
-            map8name = plugin.getConfig().getString("maps.map8.name");
-            map9name = plugin.getConfig().getString("maps.map9.name");
+            map1name = instance.getConfig().getString("maps.map1.name");
+            map2name = instance.getConfig().getString("maps.map2.name");
+            map3name = instance.getConfig().getString("maps.map3.name");
+            map4name = instance.getConfig().getString("maps.map4.name");
+            map5name = instance.getConfig().getString("maps.map5.name");
+            map6name = instance.getConfig().getString("maps.map6.name");
+            map7name = instance.getConfig().getString("maps.map7.name");
+            map8name = instance.getConfig().getString("maps.map8.name");
+            map9name = instance.getConfig().getString("maps.map9.name");
 
             map.put(map1name, 0);
 
@@ -75,20 +74,15 @@ public class MapSelector implements Listener {
                 map.put(map7name, 0);
 
             }
-            if (map2name != null){
+            if (map8name != null){
                 map.put(map8name, 0);
 
             }
-            if (map2name != null){
+            if (map9name != null){
                 map.put(map9name, 0);
 
             }
         }
-
-    public mapChoose() {
-
-    }
-
 
     private void openGUI(Player player){
         Inventory inv = Bukkit.createInventory(null, 9, "Map Selector");
@@ -186,7 +180,7 @@ public class MapSelector implements Listener {
 
 
         }
-        if (event.getCurrentItem().getItemMeta().getDisplayName() == map1name){
+        if (event.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GREEN + map1name){
             int map1v = map.get(map1name);
             map1v++;
             map.put(map1name, map1v);
@@ -194,7 +188,7 @@ public class MapSelector implements Listener {
             player.closeInventory();
 
         }
-        if (event.getCurrentItem().getItemMeta().getDisplayName() == map2name){
+        if (event.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GREEN + map2name){
             int map2v = map.get(map2name);
             map2v++;
             map.put(map2name, map2v);
@@ -202,7 +196,7 @@ public class MapSelector implements Listener {
             player.closeInventory();
 
         }
-        if (event.getCurrentItem().getItemMeta().getDisplayName() == map3name){
+        if (event.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GREEN + map3name){
             int map3v = map.get(map3name);
             map3v++;
             map.put(map3name, map3v);
@@ -210,7 +204,7 @@ public class MapSelector implements Listener {
             player.closeInventory();
 
         }
-        if (event.getCurrentItem().getItemMeta().getDisplayName() == map4name){
+        if (event.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GREEN + map4name){
             int map4v = map.get(map4name);
             map4v++;
             map.put(map4name, map4v);
@@ -218,7 +212,7 @@ public class MapSelector implements Listener {
             player.closeInventory();
 
         }
-        if (event.getCurrentItem().getItemMeta().getDisplayName() == map5name){
+        if (event.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GREEN + map5name){
             int map5v = map.get(map5name);
             map5v++;
             map.put(map5name, map5v);
@@ -226,7 +220,7 @@ public class MapSelector implements Listener {
             player.closeInventory();
 
         }
-        if (event.getCurrentItem().getItemMeta().getDisplayName() == map6name){
+        if (event.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GREEN + map6name){
             int map6v = map.get(map6name);
             map6v++;
             map.put(map6name, map6v);
@@ -234,7 +228,7 @@ public class MapSelector implements Listener {
             player.closeInventory();
 
         }
-        if (event.getCurrentItem().getItemMeta().getDisplayName() == map7name){
+        if (event.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GREEN + map7name){
             int map7v = map.get(map7name);
             map7v++;
             map.put(map7name, map7v);
@@ -242,7 +236,7 @@ public class MapSelector implements Listener {
             player.closeInventory();
 
         }
-        if (event.getCurrentItem().getItemMeta().getDisplayName() == map8name){
+        if (event.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GREEN + map8name){
             int map8v = map.get(map8name);
             map8v++;
             map.put(map1name, map8v);
@@ -250,7 +244,7 @@ public class MapSelector implements Listener {
             player.closeInventory();
 
         }
-        if (event.getCurrentItem().getItemMeta().getDisplayName() == map9name){
+        if (event.getCurrentItem().getItemMeta().getDisplayName() == ChatColor.GREEN + map9name){
             int map9v = map.get(map9name);
             map9v++;
             map.put(map9name, map9v);
