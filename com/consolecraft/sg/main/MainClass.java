@@ -8,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class MainClass extends JavaPlugin {
     
     private static MainClass plugin;
+    private static Values v = new Values();
     private NewCountdown ncd = new NewCountdown();
 
     @Override
@@ -25,6 +26,10 @@ public class MainClass extends JavaPlugin {
     
     public MainClass get() {
         return plugin;
+    }
+    
+    public Values getValues() {
+        return v;
     }
     
 }
