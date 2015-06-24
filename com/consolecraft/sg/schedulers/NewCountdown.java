@@ -5,11 +5,13 @@ package com.consolecraft.sg.schedulers;
 //12:38 GMT
 
 import com.consolecraft.sg.main.MainClass;
-import org.Bukkit;
+import com.consolecraft.sg.utils.BukkitUtils;
+import org.bukkit.Bukkit;
 //Written completely on GitHub, so I can't check for errors or needed imports :P
 
 public class NewCountdown {
-
+    
+    BukkitUtils b = new BukkitUtils();
     MainClass m = MainClass.get();
     private int id = 0;
     private int time = m.getConfig().getInt("countdown-time");
@@ -23,12 +25,7 @@ public class NewCountdown {
         id = Bukkit.getScheduler().scheduleSyncRepeatingTask(m,new Runnable() {
             public void run() {
                 neededplayers = 0;
-                players = 0;
-                for (Player p : Bukkit.getOnlinePlayers()) {
-                    players++;
-                    p.setLevel(time);
-                    p.setExp(0);
-                }
+                players = b.getPlayers();
                 neededplayers = requiredplayers - players;
                 if (players > requiredplayers-1 && time % 10 == 0 || time == 3 || time == 2 || time == 1) {
                     Bukkit.broadcastMessage("§6>> §c" + time + " §eseconds until the game begins!");
