@@ -8,12 +8,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class MainClass extends JavaPlugin {
     
     private static MainClass plugin;
+    private NewCountdown ncd = new NewCountdown();
 
     @Override
     public void onEnable() {
         plugin = this;
         Bukkit.getPluginManager().registerEvents(new MapSelector(this), this);
-        Bukkit.getPluginManager().registerEvents(new Countdown(), this);
+        ncd.runScheduler();
         saveDefaultConfig();
     }
     
