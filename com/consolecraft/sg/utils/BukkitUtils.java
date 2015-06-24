@@ -1,5 +1,8 @@
 package com.consolecraft.sg.utils;
 
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+
 public class BukkitUtils {
 
     public int getPlayers() {
