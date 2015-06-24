@@ -24,6 +24,10 @@ public class NewCountdown {
     
         id = Bukkit.getScheduler().scheduleSyncRepeatingTask(m,new Runnable() {
             public void run() {
+                for (Player p : Bukkit.getOnlinePlayers() {
+                    p.setLevel(time);
+                    p.setExp(0);
+                }
                 neededplayers = 0;
                 players = b.getPlayers();
                 neededplayers = requiredplayers - players;
